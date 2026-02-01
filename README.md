@@ -86,7 +86,20 @@ The project follows a Serverless model to ensure scalability and reduce maintena
 
 The application is built to be deployed on any static site host (Vercel, Netlify, Cloudflare Pages).
 
-```bash
-npm run build
-npm run preview
-```
+1.  **Push to GitHub**
+2.  **Import to Vercel/Netlify**
+3.  **Add Environment Variables** (Critical!)
+    You MUST add the following variables in your hosting dashboard's "Settings > Environment Variables" section. Do NOT rely on `.env` files in production.
+    
+    | Variable | Value (Example) |
+    | :--- | :--- |
+    | `VITE_APP_URL` | `https://your-project.vercel.app` (Your Setup URL) |
+    | `VITE_APPWRITE_ENDPOINT` | `https://cloud.appwrite.io/v1` |
+    | `VITE_APPWRITE_PROJECT_ID` | `...` |
+    | `VITE_APPWRITE_DATABASE_ID` | `...` |
+    | `VITE_APPWRITE_BUCKET_ID` | `...` |
+    | `VITE_APP_DEBUG_API_KEY` | *(Optional, technically needed for debug mode)* |
+
+4.  **Build Command**: `npm run build`
+5.  **Output Directory**: `dist`
+
