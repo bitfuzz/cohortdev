@@ -112,7 +112,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         }
     };
 
-    const loginWithGoogle = () => {
+    const loginWithGoogle = async () => {
+        try {
+            // Force clear stub session to prevent 409 merge errors
+            await account.deleteSession('current');
+        } catch (e) {
+            // Ignore if no session exists
+        }
+
         // Redirect to Google OAuth
         account.createOAuth2Session(
             OAuthProvider.Google,
