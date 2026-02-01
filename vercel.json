@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/appwrite/:match*",
+            "destination": "https://cloud.appwrite.io/v1/:match*"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
