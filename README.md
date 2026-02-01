@@ -1,4 +1,5 @@
 # Cohort.dev
+**[Live Demo](https://cohortdev.vercel.app/)**
 
 **IMPORTANT: Login Trouble?**
 > If you are using **Brave Browser**, **Safari**, or have strict privacy settings enabled:
@@ -7,7 +8,9 @@
 
 ![App Favicon](public/favicon.png)
 
-A real-time team finder for hackathons. Built with React 19, Appwrite, and pure CSS.s) • [Tech Stack](#tech-stack) • [Architecture](#architecture) • [Getting Started](#getting-started)
+A real-time team finder for hackathons. Built with React 19, Appwrite, and pure CSS.
+
+[Features](#features) • [Tech Stack](#tech-stack) • [Architecture](#architecture) • [Getting Started](#getting-started)
 
 ---
 
