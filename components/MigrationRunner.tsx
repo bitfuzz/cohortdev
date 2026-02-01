@@ -9,6 +9,11 @@ export const MigrationRunner: React.FC = () => {
 
     useEffect(() => {
         const runMigration = async () => {
+            // Safety: Only run if explicitly enabled via env var
+            if (import.meta.env.PROD && !import.meta.env.VITE_ENABLE_MIGRATION) {
+                return;
+            }
+
             if (status !== 'Idle') return;
             setStatus('Running');
             log('🚀 Starting Migration: Messages -> Conversations...');
@@ -132,6 +137,7 @@ export const MigrationRunner: React.FC = () => {
     }, []);
 
     if (status === 'Closed') return null;
+    if (import.meta.env.PROD && !import.meta.env.VITE_ENABLE_MIGRATION) return null;
 
     return (
         <div className="fixed inset-0 bg-black/90 text-green-400 p-8 font-mono z-[9999] overflow-auto flex flex-col">
