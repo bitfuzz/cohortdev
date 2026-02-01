@@ -1,8 +1,13 @@
-# CohortDev
+# Cohort.dev
 
-**High-Performance Team Formation Platform for Hackathons**
+**IMPORTANT: Login Trouble?**
+> If you are using **Brave Browser**, **Safari**, or have strict privacy settings enabled:
+> You simply need to **DISABLE "Shields" or "Cross-Site Tracking Prevention"** for this site to log in.
+> This is a known limitation of the hosting setup (cross-domain cookies) and ensures your session is secure.
 
-[Features](#features) • [Tech Stack](#tech-stack) • [Architecture](#architecture) • [Getting Started](#getting-started)
+![App Favicon](public/favicon.png)
+
+A real-time team finder for hackathons. Built with React 19, Appwrite, and pure CSS.s) • [Tech Stack](#tech-stack) • [Architecture](#architecture) • [Getting Started](#getting-started)
 
 ---
 

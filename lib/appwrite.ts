@@ -6,7 +6,7 @@ export const ENDPOINT = import.meta.env.VITE_APPWRITE_ENDPOINT;
 
 // Initialize Client
 export const client = new Client()
-    .setEndpoint(import.meta.env.PROD ? `${window.location.origin}/api/appwrite` : ENDPOINT)
+    .setEndpoint(ENDPOINT)
     .setProject(PROJECT_ID);
 
 // Export Services
