@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/api/appwrite/:match*",
-            "destination": "https://cloud.appwrite.io/v1/:match*"
+            "destination": "https://sgp.cloud.appwrite.io/v1/:match*"
         },
         {
             "source": "/(.*)",
