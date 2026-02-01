@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cohort.dev</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            background: "var(--bg)",
+            surface: "var(--bg-soft)",
+            element: "var(--bg-element)",
+            foreground: "var(--fg)",
+            muted: "var(--muted)",
+            border: "var(--border)",
+
+            primary: "var(--primary)",
+            "primary-fg": "var(--primary-fg)",
+
+            secondary: "var(--secondary)",
+            "secondary-fg": "var(--secondary-fg)",
+
+            // Gruvbox Palette Exposed
+            gruv: {
+              bg: "var(--bg)",
+              "bg-soft": "var(--bg-soft)",
+              "bg-hard": "var(--bg-hard)",
+              fg: "var(--fg)",
+              "fg-dim": "var(--fg-dim)",
+              red: "var(--red-bright)",
+              green: "var(--green-bright)",
+              yellow: "var(--yellow-bright)",
+              blue: "var(--blue-bright)",
+              purple: "var(--purple-bright)",
+              aqua: "var(--aqua-bright)",
+              orange: "var(--orange-bright)",
+            }
+          },
+          borderRadius: {
+            none: '0px',
+            sm: '0px',
+            DEFAULT: '0px',
+            md: '0px',
+            lg: '0px',
+            xl: '0px',
+            '2xl': '0px',
+            '3xl': '0px',
+            full: '0px', // Force sharp even for "full"
+          },
+          boxShadow: {
+            'soft': 'none', // No soft shadows
+            'hover': 'none',
+            'hard': '4px 4px 0px 0px var(--border)', // Hard shadow
+          },
+          borderWidth: {
+            DEFAULT: '1px',
+          }
+        },
+      },
+    };
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      /* Gruvbox Dark Hard (Default) */
+      --bg: #1d2021;
+      /* Hard Dark (Page) */
+      --bg-soft: #282828;
+      /* Medium Dark (Cards) */
+      --bg-hard: #1d2021;
+      /* Same as bg for inputs (Recessed) */
+      --bg-element: #3c3836;
+      /* Lighter Dark (Buttons/Tags) */
+
+      --fg: #ebdbb2;
+      /* Cream (Primary Text) */
+      --fg-dim: #a89984;
+      /* Grey (Secondary Text) */
+
+      --border: #504945;
+      /* Darker Grey (Subtle Borders) */
+
+      /* Accents */
+      --red: #cc241d;
+      --green: #98971a;
+      --yellow: #d79921;
+      --blue: #458588;
+      --purple: #b16286;
+      --aqua: #689d6a;
+      --orange: #d65d0e;
+
+      /* Bright Accents (Hover/Active) */
+      --red-bright: #fb4934;
+      --green-bright: #b8bb26;
+      --yellow-bright: #fabd2f;
+      --blue-bright: #83a598;
+      --purple-bright: #d3869b;
+      --aqua-bright: #8ec07c;
+      --orange-bright: #fe8019;
+
+      /* Semantic Mappings */
+      --primary: var(--orange-bright);
+      --primary-fg: #1d2021;
+
+      --secondary: var(--aqua-bright);
+      --secondary-fg: #1d2021;
+
+      --muted: var(--fg-dim);
+    }
+
+    /* Gruvbox Light Theme */
+    html.light {
+      --bg: #fbf1c7;
+      /* Light Cream (Page) */
+      --bg-soft: #f2e5bc;
+      /* Darker Cream (Cards) */
+      --bg-hard: #f9f5d7;
+      /* Lighter Cream */
+      --bg-element: #ebdbb2;
+      /* Darker Element Background */
+
+      --fg: #3c3836;
+      /* Dark Grey (Text) */
+      --fg-dim: #7c6f64;
+      /* Medium Grey */
+
+      --border: #bdae93;
+      /* Darker Grey (Borders) */
+
+      /* Darker Accents for Light Mode Contrast */
+      --primary: #d65d0e;
+      /* Orange */
+      --primary-fg: #fbf1c7;
+
+      --secondary: #689d6a;
+      /* Aqua */
+      --secondary-fg: #fbf1c7;
+
+      --muted: #928374;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: 'Space Grotesk', sans-serif;
+      /* Technical Sans */
+      -webkit-font-smoothing: antialiased;
+      overflow-y: scroll;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23504945' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    html.light body {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a89984' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Typography Overrides */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Space Grotesk', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    code,
+    pre,
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Global Selection Highlight */
+    ::selection {
+      background-color: var(--primary);
+      color: var(--primary-fg);
+    }
+
+    /* Scrollbar - Industrial Style */
+    ::-webkit-scrollbar {
+      width: 12px;
+      background: var(--bg);
+      border-left: 1px solid var(--border);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      /* Sharp */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: var(--border);
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "drizzle-orm/": "https://aistudiocdn.com/drizzle-orm@^0.44.7/"
+  }
+}
+</script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

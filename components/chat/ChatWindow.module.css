@@ -1,0 +1,139 @@
+.windowContainer {
+    @apply flex-1 flex flex-col bg-surface border border-border shadow-none overflow-hidden relative w-full min-w-0;
+}
+
+.header {
+    @apply h-20 border-b border-border flex items-center justify-between px-4 md:px-8 bg-gruv-bg-hard z-10 shrink-0;
+}
+
+.mobileMenuButton {
+    @apply md:hidden p-2 -ml-2 hover:bg-border rounded-none text-muted border border-transparent hover:border-border;
+}
+
+.headerInfo {
+    @apply flex items-center gap-4 min-w-0;
+}
+
+.avatarContainer {
+    @apply w-10 h-10 rounded-none bg-primary/10 flex items-center justify-center text-primary border border-primary shrink-0;
+}
+
+.avatarImage {
+    @apply w-10 h-10 rounded-none object-cover border border-border shrink-0;
+}
+
+.headerText {
+    @apply text-lg font-bold text-gruv-fg block flex items-center gap-2 uppercase tracking-wide truncate;
+}
+
+.headerSubtext {
+    @apply text-xs font-bold text-gruv-fg-dim uppercase tracking-widest font-mono truncate;
+}
+
+.headerActions {
+    @apply flex items-center gap-2 text-muted shrink-0;
+}
+
+.actionButton {
+    @apply p-2 text-muted hover:bg-border hover:text-foreground rounded-none transition-colors border border-transparent hover:border-border;
+}
+
+.blockButton {
+    @apply p-2 rounded-none cursor-pointer transition-colors border border-transparent;
+}
+
+.blocked {
+    @apply bg-gruv-red text-gruv-bg hover:bg-gruv-red/90 border-gruv-red;
+}
+
+.unblocked {
+    @apply hover:bg-border hover:text-gruv-red hover:border-border;
+}
+
+.messagesContainer {
+    @apply flex-1 overflow-y-auto p-4 md:p-8 bg-background/30 scrollbar-thin flex flex-col;
+}
+
+.emptyState {
+    @apply flex flex-col items-center justify-center h-full text-center p-8;
+}
+
+.emptyIcon {
+    @apply w-20 h-20 bg-surface border border-border rounded-none flex items-center justify-center mb-6;
+}
+
+.ctaButton {
+    @apply px-6 py-3 bg-primary text-primary-fg rounded-none font-bold uppercase tracking-wider shadow-hard hover:-translate-y-0.5 transition-transform border border-transparent;
+}
+
+.noMessages {
+    @apply flex flex-col items-center justify-center h-full text-muted opacity-50 font-mono text-xs uppercase tracking-widest;
+}
+
+.messageList {
+    @apply mt-auto flex flex-col gap-6;
+}
+
+.teamHeader {
+    @apply mb-8 p-4 bg-surface border border-border rounded-none;
+}
+
+.teamTitle {
+    @apply text-[10px] font-bold text-gruv-fg-dim uppercase tracking-widest mb-3 flex items-center gap-2 font-mono;
+}
+
+.teamMembers {
+    @apply flex flex-wrap gap-2;
+}
+
+.memberTag {
+    @apply flex items-center gap-2 px-3 py-1.5 bg-background border border-border rounded-none text-xs font-mono;
+}
+
+.currentUserTag {
+    @apply bg-primary/10 text-primary border-primary;
+}
+
+.messageRow {
+    @apply flex gap-4;
+}
+
+.messageRowMe {
+    @apply flex-row-reverse;
+}
+
+.messageContent {
+    @apply max-w-[85%] md:max-w-[70%] flex flex-col min-w-0;
+}
+
+.messageBubble {
+    @apply px-4 py-3 rounded-none text-sm font-medium leading-relaxed shadow-none break-words border;
+}
+
+.bubbleMe {
+    @apply bg-primary text-primary-fg border-primary;
+}
+
+.bubbleOther {
+    @apply bg-surface text-foreground border-border;
+}
+
+.inputArea {
+    @apply p-4 md:p-6 bg-surface border-t border-border shrink-0;
+}
+
+.inputWrapper {
+    @apply relative flex items-center gap-3;
+}
+
+.inputField {
+    @apply flex-1 bg-background border border-border rounded-none px-4 py-3 font-mono text-sm text-foreground focus:border-primary focus:outline-none transition-colors placeholder:text-muted;
+}
+
+.sendButton {
+    @apply p-3 bg-primary text-primary-fg rounded-none hover:brightness-110 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-hard active:translate-y-0.5 active:shadow-none border border-transparent;
+}
+
+.blockedBanner {
+    @apply p-6 bg-gruv-red/10 border-t border-gruv-red flex items-center justify-center gap-2 text-gruv-red font-bold uppercase tracking-wide;
+}

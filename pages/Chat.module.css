@@ -1,0 +1,7 @@
+.container {
+    @apply h-[calc(100vh-4rem)] w-full flex items-center justify-center p-4 md:p-6 overflow-hidden;
+}
+
+.wrapper {
+    @apply flex h-full w-full max-w-6xl gap-0 md:gap-6 relative bg-transparent;
+}

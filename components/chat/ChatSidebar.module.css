@@ -1,0 +1,119 @@
+.sidebarOverlay {
+    @apply fixed inset-0 z-40 bg-background/80 backdrop-blur-sm md:hidden;
+}
+
+.sidebarContainer {
+    @apply fixed md:relative z-50 w-80 h-full bg-surface border-r border-border shadow-hard md:shadow-none flex flex-col transition-transform duration-300 shrink-0;
+}
+
+.sidebarHeader {
+    @apply p-4 border-b border-border flex items-center justify-between bg-gruv-bg-hard shrink-0;
+}
+
+.headerTitle {
+    @apply font-bold text-lg flex items-center gap-2 uppercase tracking-widest text-gruv-fg;
+}
+
+.headerIcon {
+    @apply w-8 h-8 bg-primary rounded-none flex items-center justify-center text-primary-fg border border-primary-fg;
+}
+
+.closeButton {
+    @apply md:hidden p-2 hover:bg-border rounded-none border border-transparent hover:border-border;
+}
+
+.tabsContainer {
+    @apply p-4 space-y-4 border-b border-border bg-gruv-bg shrink-0;
+}
+
+.tabButton {
+    @apply flex-1 py-2 rounded-none text-xs font-bold uppercase tracking-wider transition-colors border border-border;
+}
+
+.activeTab {
+    @apply bg-primary text-primary-fg border-primary;
+}
+
+.inactiveTab {
+    @apply text-muted hover:bg-border hover:text-foreground;
+}
+
+.searchContainer {
+    @apply relative;
+}
+
+.searchInput {
+    @apply w-full bg-background border border-border rounded-none py-3 pl-10 pr-4 text-sm font-mono text-foreground placeholder-muted focus:outline-none focus:border-primary focus:ring-0 transition-all;
+}
+
+.listContainer {
+    @apply flex-1 overflow-y-auto p-0 scrollbar-thin;
+}
+
+.teamItem {
+    @apply px-4 py-4 rounded-none flex items-center gap-3 cursor-pointer transition-all border-b border-border hover:bg-gruv-bg-hard;
+}
+
+.activeTeamItem {
+    @apply bg-primary/10 border-l-4 border-l-primary text-foreground;
+}
+
+.inactiveTeamItem {
+    @apply bg-background text-muted hover:text-foreground border-l-4 border-l-transparent;
+}
+
+.divider {
+    @apply h-px bg-border my-0;
+}
+
+.sectionTitle {
+    @apply text-[10px] font-bold text-gruv-fg-dim uppercase tracking-widest px-4 py-2 bg-gruv-bg-hard border-y border-border;
+}
+
+.userItem {
+    @apply flex items-center gap-3 px-4 py-3 rounded-none cursor-pointer transition-colors group border-b border-border relative hover:bg-gruv-bg-soft;
+}
+
+.activeUserItem {
+    @apply bg-primary/5 border-l-4 border-l-primary pl-3;
+}
+
+.inactiveUserItem {
+    @apply border-l-4 border-l-transparent pl-3;
+}
+
+.onlineIndicator {
+    @apply absolute -bottom-0.5 -right-0.5 w-2 h-2 bg-gruv-green border border-background rounded-none z-10;
+}
+
+.moreButton {
+    @apply p-1.5 rounded-none text-muted hover:text-foreground hover:bg-border opacity-0 group-hover:opacity-100 transition-opacity;
+}
+
+.menuDropdown {
+    @apply absolute right-0 top-8 z-50 bg-surface border border-border rounded-none shadow-hard w-48 overflow-hidden;
+}
+
+.menuItem {
+    @apply w-full text-left px-4 py-3 text-xs font-bold uppercase tracking-wider hover:bg-primary hover:text-primary-fg flex items-center gap-2;
+}
+
+.emptyState {
+    @apply text-center py-8 text-muted font-mono text-xs;
+}
+
+.inviteItem {
+    @apply p-3 bg-background border-b border-border rounded-none;
+}
+
+.inviteActions {
+    @apply flex gap-2 mt-2;
+}
+
+.acceptButton {
+    @apply flex-1 py-1.5 bg-gruv-green text-gruv-bg rounded-none text-xs font-bold uppercase flex items-center justify-center gap-1 hover:brightness-110 border border-transparent;
+}
+
+.rejectButton {
+    @apply flex-1 py-1.5 bg-surface border border-border text-foreground rounded-none text-xs font-bold uppercase flex items-center justify-center gap-1 hover:bg-border;
+}
